@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MASKED EMOJOI</title>
+</head>
+<body>
+    <div class="emoji">
+        <div class="mask">
+            <div class="details"></div>
+        </div>
+    </div>
+    <style>
+        body{
+            background-color: #5f1651;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            height: 100vh;
+            place-items: center center;
+        }
+        .emoji{
+            height: 300px;
+            width: 300px;
+            background-image: radial-gradient(#feca3e 58%,#ff8000 80%);
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
+        }
+        .emoji:before,.emoji:after{
+            content: "";
+            height: 45px;
+            width: 32px;
+            background-color: #663d0f;
+            position: absolute;
+            box-shadow: 0 -6px #4d2e08;
+            border-radius: 50%;
+            top: 90px;
+        }
+        .emoji:before{
+            left: 80px;
+        }
+        .emoji:after{
+            right: 80px;
+        }
+        .mask{
+            height: 120px;
+            width: 220px;
+            background-color: #e9fbfa;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            z-index: 0;
+            border-radius: 5px 5px 50% 50%;
+        }
+        .mask:before,.mask:after{
+            content: "";
+            width: 300px;
+            height: 10px;
+            background-color: #e9fbfa;
+            position: absolute;
+            z-index: -1;
+        }
+        .mask:before{
+            transform: rotate(-20deg);
+            right: -51px;
+            top: 30px;
+        }
+        .mask:after{
+            transform: rotate(20deg);
+            left: -51px;
+            top: 30px;
+        }
+        .details{
+            height: 15px;
+            width: 180px;
+            background-color: #bef4f1;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 20px;
+            border-radius: 0 0 50% 50%;
+            box-shadow: 0 25px #bef4f1,0 50px #bef4f1;
+        }
+    </style>
+</body>
+</html>
